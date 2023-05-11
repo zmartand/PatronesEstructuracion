@@ -1,0 +1,48 @@
+@startuml
+interface ElementoFactory {
+  +createElemento(codigo: int, precio: double): Elemento
+}
+
+class ElementoSimpleFactory {
+  +createElemento(codigo: int, precio: double): Elemento
+}
+
+class KitFactory {
+  +createElemento(codigo: int, precio: double): Elemento
+}
+
+ElementoFactory <|.. ElementoSimpleFactory
+ElementoFactory <|.. KitFactory
+
+abstract class Elemento {
+  -codigo: int
+  -precio: double
+  +Elemento(codigo: int, precio: double)
+  +getCodigo(): int
+  +getPrecio(): double {abstract}
+  +agregarElemento(elemento: Elemento): void
+  +eliminarElemento(elemento: Elemento): void
+  +mostrar(): void {abstract}
+}
+
+class ElementoSimple {
+  +ElementoSimple(codigo: int, precio: double)
+  +getPrecio(): double
+  +mostrar(): void
+}
+
+class Kit {
+  -elementos: List<Elemento>
+  +Kit(codigo: int)
+  +agregarElemento(elemento: Elemento): void
+  +eliminarElemento(elemento: Elemento): void
+  +getPrecio(): double
+  +mostrar(): void
+}
+
+ElementoSimpleFactory ..> ElementoSimple: creates
+KitFactory ..> Kit: creates
+
+Elemento <|-- ElementoSimple
+Elemento <|-- Kit
+@enduml
