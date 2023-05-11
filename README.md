@@ -1,4 +1,4 @@
-# PatronesEstructuracion
+# Prueba de Evaluación Patrones de Estructuración 2022_2023
 
 ## Nota:
 Mi repositorio es: https://github.com/zmartand/PatronesEstructuracion.git
