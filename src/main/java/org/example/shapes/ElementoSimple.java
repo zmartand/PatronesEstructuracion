@@ -1,4 +1,6 @@
-package org.example;
+package org.example.shapes;
+
+import org.example.shapes.Elemento;
 
 public class ElementoSimple extends Elemento {
 

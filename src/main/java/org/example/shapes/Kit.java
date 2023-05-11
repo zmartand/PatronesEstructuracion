@@ -1,4 +1,6 @@
-package org.example;
+package org.example.shapes;
+
+import org.example.shapes.Elemento;
 
 import java.util.ArrayList;
 import java.util.List;

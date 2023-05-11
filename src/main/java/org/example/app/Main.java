@@ -1,8 +1,10 @@
-package org.example;
+package org.example.app;
+
+import org.example.app.App;
 
 public class Main {
     public static void main(String[] args) {
-        Demo demo = new Demo();
+        App demo = new App();
         demo.demo();
     }
 }

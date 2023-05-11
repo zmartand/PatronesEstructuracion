@@ -1,6 +1,12 @@
-package org.example;
+package org.example.app;
 
-public class Demo {
+import org.example.shapes.Elemento;
+import org.example.shapes.Kit;
+import org.example.shapes.factories.ElementoFactory;
+import org.example.shapes.factories.ElementoSimpleFactory;
+import org.example.shapes.factories.KitFactory;
+
+public class App {
     public void demo(){
             ElementoFactory elementoSimpleFactory = new ElementoSimpleFactory();
             ElementoFactory kitFactory = new KitFactory();

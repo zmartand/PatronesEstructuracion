@@ -1,4 +1,4 @@
-package org.example;
+package org.example.shapes;
 public abstract class Elemento {
     protected int codigo;
     protected double precio;
